@@ -1,0 +1,167 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500&display=swap");
+@font-face {
+  font-family: "Cafe Francoise", sans-serif;
+  src: url(../fonts/Cafe\ Francoise_D.otf);
+}
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* CUSTOM PROPERTIES */
+
+:root {
+  /* Colors */
+  --yellow: #f8de22;
+  --dandelion--yellow: #ffd966;
+  --dark-yellow: #ffb80e;
+  --barley--white: #fff2cc;
+
+  /* Fonts */
+  --brand-f: "Cafe Francoise", sans-serif;
+  --heading-f: "Lato", sans-serif;
+  --body-f: "Roboto", sans-serif;
+  --alt-f: "Raleway", sans-serif;
+}
+
+/* MOBILE FIRST */
+
+body {
+  display: grid;
+  font-family: var(--body-f);
+}
+
+/* .sidebar {
+  grid-area: sidebar;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+} */
+
+/*    Top Bar / Sidebar    */
+
+.sidebar {
+  display: flex;
+  background-color: var(--dandelion--yellow);
+  height: 70px;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  gap: 0.5em;
+  margin-left: 0.5em;
+}
+
+.right {
+  margin-left: auto;
+  margin-right: 1em;
+}
+h1 {
+  font-family: var(--brand-f);
+  font-size: 2rem;
+}
+
+.logo-cont {
+  height: 50px;
+}
+
+/*      Main Content      */
+
+main {
+  display: grid;
+  padding: 0.5em;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  grid-template-areas:
+    "hero-heading"
+    "hero-img"
+    "hero-text"
+    "hero-btn";
+  justify-items: center;
+  margin-top: 1em;
+  background-color: var(--barley--white);
+  border-radius: 10px;
+  gap: 1em;
+}
+
+.hero-heading {
+  grid-area: hero-heading;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: var(--alt-f);
+  font-weight: 700;
+  text-align: center;
+}
+
+.hero-text {
+  grid-area: hero-text;
+  padding: 0 2em;
+}
+
+.hero-text p {
+  font-family: var(--alt-f);
+  text-align: justify;
+}
+
+.hero-btn {
+  grid-area: hero-btn;
+  display: flex;
+  gap: 0.5em;
+}
+
+.hero-img-cont {
+  grid-area: hero-img;
+  width: 300px;
+}
+
+.hero-img-cont img {
+  border-radius: 10%;
+}
+
+.btn {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  padding: 0 24px;
+  border-radius: 50px;
+  max-width: 200px;
+  height: 50px;
+  font-size: 18px;
+  background-color: var(--dandelion--yellow);
+  font-weight: 800;
+  color: #222;
+  box-shadow: 0 0 0 3px #000000 inset;
+  font-family: var(--alt-f);
+  font-weight: 700;
+}
+
+/* Gallery */
