@@ -45,9 +45,14 @@ img {
 body {
   display: grid;
   font-family: var(--body-f);
+  background-color: var(--barley--white);
+  grid-template-areas:
+    "sidebar"
+    "main"
+    "footer";
 }
 
-/* .sidebar {
+.sidebar {
   grid-area: sidebar;
 }
 
@@ -57,7 +62,7 @@ main {
 
 footer {
   grid-area: footer;
-} */
+}
 
 /*    Top Bar / Sidebar    */
 
@@ -66,6 +71,10 @@ footer {
   background-color: var(--dandelion--yellow);
   height: 70px;
   align-items: center;
+}
+
+.links {
+  display: none;
 }
 
 .left {
@@ -91,7 +100,7 @@ h1 {
 
 main {
   display: grid;
-  padding: 0.5em;
+  /* padding: 0.5em; */
 }
 
 /* Hero */
@@ -108,6 +117,7 @@ main {
   background-color: var(--barley--white);
   border-radius: 10px;
   gap: 1em;
+  padding: 0.5em;
 }
 
 .hero-heading {
@@ -164,4 +174,94 @@ h2 {
   font-weight: 700;
 }
 
+hr {
+  border: none;
+  border-top: 2px solid;
+}
+
 /* Gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.gallery-heading {
+  font-family: var(--brand-f);
+  font-size: 2.5rem;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 2px solid black;
+  padding: 1em;
+  border-radius: 5%;
+}
+
+.gallery-img img {
+  border-radius: 30%;
+}
+
+h3 {
+  font: var(--alt-f);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Footer */
+
+
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  background-color: var(--dandelion--yellow);
+  border-top: 2px solid black;
+  margin-top: 1em;
+  gap: 1em;
+  justify-content: center;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 0.5rem; */
+  /* flex-wrap: wrap; */
+}
+
+h4 {
+  font-family: var(--brand-f);
+  letter-spacing: 0.5em;
+  font-size: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.footer-container i {
+  color: #000000;
+  font-size: 2rem;
+  margin: 3px 0;
+}
+
+.footer-container p {
+  text-align: center;
+  font-weight: 500;
+
+}
