@@ -1,5 +1,5 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Londrina+Solid&family=Raleway:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500&display=swap");
 @font-face {
   font-family: "Cafe Francoise", sans-serif;
   src: url("../fonts/Cafe\ Francoise_D.otf");
@@ -34,7 +34,7 @@ img {
   --barley--white: #fff2cc;
 
   /* Fonts */
-  --brand-f: "Cafe Francoise", sans-serif;
+  --brand-f: "Cafe Francoise", "Londrina Solid", sans-serif;
   --heading-f: "Lato", sans-serif;
   --body-f: "Roboto", sans-serif;
   --alt-f: "Raleway", sans-serif;
@@ -94,6 +94,8 @@ footer {
 h1 {
   font-family: var(--brand-f);
   font-size: 2rem;
+  text-transform: uppercase;
+  align-self: center;
 }
 
 .logo-cont {
@@ -470,6 +472,26 @@ footer p {
 
   .gallery-item {
     width: 355px;
+  }
+
+  .gallery-item img:hover {
+    animation-name: img-an;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes img-an {
+    0% {
+      opacity: 0.3;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   /* Footer */
