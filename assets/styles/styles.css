@@ -1,9 +1,9 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500&display=swap");
-/* @font-face {
+@font-face {
   font-family: "Cafe Francoise", sans-serif;
-  src: url("/fonts/Cafe\ Francoise_D.otf");
-} */
+  src: url("../fonts/Cafe\ Francoise_D.otf");
+}
 
 /* RESET */
 
@@ -286,8 +286,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 0.5rem; */
-  /* flex-wrap: wrap; */
 }
 
 h4 {
@@ -311,10 +309,9 @@ h4 {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.footer-links i:active {
+.footer-links i:hover {
   transform: scale(1.5);
 }
-
 .footer-container i {
   color: #000000;
   font-size: 2rem;
@@ -495,10 +492,6 @@ footer p {
     flex-direction: row;
     justify-content: center;
     gap: 1em;
-  }
-
-  .footer-links i:hover {
-    transform: scale(1.5);
   }
 
   footer p {
